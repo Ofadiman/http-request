@@ -19,8 +19,9 @@ if (parsedOptions.success) {
   axios[parsedOptions.data.method](parsedOptions.data.url, {
     timeout: parsedOptions.data.timeout,
   })
-    .then(() => {
+    .then((response) => {
       info('Successfully executed http request.')
+      info(JSON.stringify(response.data, null, 2))
     })
     .catch((err) => {
       if (err.response) {
