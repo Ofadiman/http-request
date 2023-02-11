@@ -1,0 +1,17 @@
+name: Http request using custom docker action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  request:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Send http request
+        uses: Ofadiman/http-request@v1.0.0
+        with:
+          url: https://jsonplaceholder.typicode.com/todos/1
+          timeout: 1000
+          method: get
