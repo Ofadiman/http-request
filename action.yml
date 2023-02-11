@@ -1,0 +1,23 @@
+name: Http request
+author: Ofadiman
+description: Send http request to selected endpoint.
+inputs:
+  method:
+    description: The HTTP method (get or options) used when sending request.
+    required: true
+  timeout:
+    description: The maximum time (ms) to wait for a successful HTTP request.
+    required: true
+  url:
+    description: The URL to which HTTP request will be sent.
+    required: true
+branding:
+  color: purple
+  icon: globe
+runs:
+  using: docker
+  image: docker://ofadiman/http-request:5c09057f939d9c5aec8a6ead2fac45f2da2e3b3f
+  args:
+    - --method ${{ inputs.method}}
+    - --url ${{ inputs.url}}
+    - --timeout ${{ inputs.timeout}}
