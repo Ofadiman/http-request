@@ -16,7 +16,7 @@ branding:
   icon: globe
 runs:
   using: docker
-  image: docker://ofadiman/http-request:5c09057f939d9c5aec8a6ead2fac45f2da2e3b3f
+  image: docker://ofadiman/http-request:39574361a8e297f753c472553a3bf9fd3e58b7fd
   args:
     - --method ${{ inputs.method}}
     - --url ${{ inputs.url}}
