@@ -18,6 +18,6 @@ runs:
   using: docker
   image: docker://ofadiman/http-request:39574361a8e297f753c472553a3bf9fd3e58b7fd
   args:
-    - --method ${{ inputs.method}}
-    - --url ${{ inputs.url}}
-    - --timeout ${{ inputs.timeout}}
+    - --method=${{ inputs.method}}
+    - --url=${{ inputs.url}}
+    - --timeout=${{ inputs.timeout}}
